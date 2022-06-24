@@ -30,3 +30,8 @@ float	  单精度浮点
 int	    整型
 long	  长整型
 short	  短整型
+
+变量引用:
+super	父类,超类
+this	本类
+void	无返回值
