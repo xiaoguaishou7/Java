@@ -70,3 +70,31 @@ byte,short,char—> int —> long—> float —> double
 
 int i =128;   
 byte b = (byte)i;
+因为 byte 类型是 8 位，最大值为127，所以当 int 强制转换为 byte 类型时，值 128 时候就会导致溢出。
+
+#Java变量类型
+Java语言支持的变量类型有：
+
+类变量：独立于方法之外的变量，用 static 修饰。  //类变量就是说它可以不通过对象来访问，可以直接访问
+实例变量：独立于方法之外的变量，不过没有 static 修饰。
+局部变量：类的方法中的变量。
+例子：
+public class Variable{
+    static int allClicks=0;    // 类变量
+ 
+    String str="hello world";  // 实例变量
+ 
+    public void method(){
+ 
+        int i = 0;  // 局部变量
+ 
+    }
+}
+
+
+
+
+
+
+
+
