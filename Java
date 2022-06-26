@@ -167,9 +167,76 @@ String s5 = new String("Runoob");   // String 对象创建
 
 "Hello, runoob!"
 
+Java 数组：
+1.声明数组变量 //声明数组并不是创建数组
+首先必须声明数组变量，才能在程序中使用数组。下面是声明数组变量的语法：
+dataType[] arrayRefVar;   // 首选的方法，dataType是数据类型
+或
+dataType arrayRefVar[];  // 效果相同，但不是首选方法，这个东西不怎么用，好像是会出现什么线程之类问题
 
+2.创建数组
+Java语言使用new操作符来创建数组，语法如下：
+arrayRefVar = new dataType[arraySize];
 
+上面的语法语句做了两件事：
+一、使用 dataType[arraySize] 创建了一个数组。
+二、把新创建的数组的引用赋值给变量 arrayRefVar。
 
+数组变量的声明，和创建数组可以用一条语句完成，如下所示：
+dataType[] arrayRefVar = new dataType[arraySize];
+
+3.For-Each 循环
+JDK 1.5 引进了一种新的循环类型，被称为 For-Each 循环或者加强型循环，它能在不使用下标的情况下遍历数组。
+
+语法格式如下：
+
+for(type element: array)
+{
+    System.out.println(element);
+}
+
+实例
+该实例用来显示数组 myList 中的所有元素：
+
+TestArray.java 文件代码：
+public class TestArray {
+   public static void main(String[] args) {
+      double[] myList = {1.9, 2.9, 3.4, 3.5};
+ 
+      // 打印所有数组元素
+      for (double element: myList) {
+         System.out.println(element);
+      }
+   }
+}
+输出：
+1.9
+2.9
+3.4
+3.5
+
+4.数组作为函数的参数
+数组可以作为参数传递给方法。
+
+例如，下面的例子就是一个打印 int 数组中元素的方法:
+
+public static void printArray(int[] array) {
+  for (int i = 0; i < array.length; i++) {
+    System.out.print(array[i] + " ");
+  }
+}
+下面例子调用 printArray 方法打印出 3，1，2，6，4 和 2：
+printArray(new int[]{3, 1, 2, 6, 4, 2});
+
+5.数组作为函数的返回值
+public static int[] reverse(int[] list) { //同时也是数组作为函数的参数
+  int[] result = new int[list.length];
+ 
+  for (int i = 0, j = result.length - 1; i < list.length; i++, j--) {
+    result[j] = list[i];
+  }
+  return result;
+}
 
 
 
