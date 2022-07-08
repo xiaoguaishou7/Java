@@ -309,7 +309,8 @@ Java 为 I/O 提供了强大的而灵活的支持，使其更广泛地应用到�
 但本节讲述最基本的和流与 I/O 相关的功能。我们将通过一个个例子来学习这些功能。
 
 读取控制台输入
-Java 的控制台输入由 System.in 完成。 //这个东西比Scanner快了十倍左右，最好以后都用BufferedReader
+Java 的控制台输入由 System.in 完成。 //这个东西比Scanner快了十倍左右，最好以后都用BufferedReader，但是BufferedReader只能读取字符或者字符串,
+也可以读取整型，方法就是Integer类的parseInt()方法接受一个String值，将其解析为带符号的十进制整数，然后将其返回。
 
 为了获得一个绑定到控制台的字符流，你可以把 System.in 包装在一个 BufferedReader 对象中来创建一个字符流。
 
@@ -345,7 +346,16 @@ public class BRRead {
     }
 }
 
+从标准输入读取一个字符串需要使用 BufferedReader 的 readLine() 方法。
 
+它的一般格式是：
+
+String readLine( ) throws IOException
+
+Scanner:
+Scanner in = new Scanner(System.in);  //格式
+
+如果是读入整型的话就是
 
 
 
