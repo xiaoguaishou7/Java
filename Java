@@ -592,7 +592,7 @@ location: class Animal
                  ^
 该程序将抛出一个编译错误，因为b的引用类型Animal没有bark方法。
 只要将程序改为Dog b  = new Dog();就可以了
-Animal a = new Dog()这个东西，a只能调用Animal的函数以及Dog()里面重写Animal的方法
+Animal a = new Dog()这个东西，a只能调用Animal的函数以及Dog()里面重写Animal的方法，优先调用Dog()里面重写的方法
 
 方法的重写规则
 参数列表与被重写方法的参数列表必须完全相同。
